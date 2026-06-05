@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Headroom Solar — Financial Model Brief (for the Gini session)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#fafbfc;--paper:#fff;--panel-2:#f1f5f9;--line:#e2e8f0;--ink:#0f172a;--muted:#5b6b7a;--accent:#65a30d;--accent-dim:#4d7c0f;--accent-bg:#ecfccb;--solar:#d97706;--solar-bg:#fff7e6;--flag:#b45309;--blue:#1d4ed8}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .container{max-width:920px;margin:0 auto;padding:38px 28px 90px}
+  .doc-badge{font-size:11px;padding:4px 10px;border-radius:999px;background:var(--solar-bg);color:#92400e;border:1px solid rgba(217,119,6,.3);font-weight:600;letter-spacing:.04em;display:inline-block;margin-bottom:14px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;margin-bottom:18px}
+  .brand .mk{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--solar),var(--accent-dim));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px}
+  .brand span{color:var(--accent)}
+  h1{font-size:29px;font-weight:800;letter-spacing:-.02em;line-height:1.14;margin-bottom:10px}
+  .lead{color:var(--muted);font-size:15px;max-width:760px}
+  .meta{font-size:12.5px;color:var(--muted);margin-top:12px}
+  .meta b{color:var(--ink)}
+  section.s{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:18px 0;box-shadow:0 1px 3px rgba(15,23,42,.04)}
+  .s-head{display:flex;align-items:center;gap:11px;margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--line)}
+  .s-head .num{width:26px;height:26px;border-radius:7px;background:var(--accent);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+  .s-head h2{font-size:19px;font-weight:700;letter-spacing:-.01em}
+  h3{font-size:14.5px;font-weight:700;margin:14px 0 6px}
+  p{font-size:14px;margin:8px 0}
+  ul,ol{margin:8px 0 8px 22px}
+  li{font-size:14px;margin:5px 0}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+  th,td{text-align:left;padding:8px 10px;border:1px solid var(--line);vertical-align:top}
+  th{background:var(--panel-2);font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+  .num-c{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .callout{margin:14px 0;padding:13px 15px;border-radius:11px;background:var(--accent-bg);border:1px solid rgba(101,163,13,.3);font-size:13.5px;color:#3f5806}
+  .callout.flag{background:#fffbeb;border-color:#fde68a;color:#7c2d12}
+  .callout.flag b{color:#7c2d12}
+  .tbc{font-style:italic;color:var(--flag)}
+  .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--solar-bg);color:#92400e;margin-left:6px}
+  .timeline{display:flex;flex-wrap:wrap;gap:0;margin:14px 0;border:1px solid var(--line);border-radius:11px;overflow:hidden}
+  .tl{flex:1;min-width:120px;padding:13px 14px;border-right:1px solid var(--line);background:#fbfcfd}
+  .tl:last-child{border-right:none}
+  .tl .d{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .tl .e{font-size:13px;font-weight:600;margin-top:4px}
+  .tl .c{font-size:12.5px;margin-top:5px;font-weight:700}
+  .tl .c.out{color:#b91c1c}
+  .tl .c.in{color:var(--accent-dim)}
+  footer{color:var(--muted);font-size:12px;margin-top:24px;padding-top:14px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand"><span class="mk">H</span>Head<span>room</span> Solar</div>
+  <span class="doc-badge">Financial Model Brief · for the Gini session · 5 June 2026</span>
+  <h1>What the Headroom Solar model needs to answer</h1>
+  <p class="lead">A working brief for the financial modelling session with Virginia (Gini). It frames the build, sets out the lines to model, and puts the one question that defines the venture's cash needs at the front: because we buy and own the hardware, how big is the working-capital gap, and how do we fund it?</p>
+  <div class="meta"><b>For:</b> Virginia Filmer-Sankey, Mark Evans-Smith · <b>Prepared by:</b> Jedi · <b>Status:</b> brief, pre-model. All figures placeholders to be set in session.</div>
+
+  <section class="s">
+    <div class="s-head"><span class="num">1</span><h2>The decisions the model must serve</h2></div>
+    <ol>
+      <li><b>How much cash does Headroom need to operate,</b> and when does the need peak? (driven by hardware funding)</li>
+      <li><b>What does a deal actually make us,</b> by track (owned EPC, funded/PPA, lease) and by add-on (battery, EV, O&amp;M)?</li>
+      <li><b>How many deals, of what size, to contribute meaningfully to Mark's £1m mandate</b> in year one?</li>
+      <li><b>What recurring revenue (service &amp; maintenance ARR)</b> builds underneath the project income, and how fast?</li>
+      <li><b>What is break-even,</b> and what is the downside case if installs come slowly?</li>
+    </ol>
+  </section>
+
+  <section class="s">
+    <div class="s-head"><span class="num">2</span><h2>The headline: the hardware-funding gap</h2></div>
+    <p>Under the agreed model, <b>Headroom procures and owns the hardware</b> and free-issues it to Get-Services, who supply install labour only. That gives us the procurement margin and the manufacturer warranties, but it puts the <b>cash for the kit on our balance sheet before the client has paid in full</b>. This is the single most important thing the model must size.</p>
+    <h3>Indicative cash timeline on one 250kWp job <span class="tbc">(placeholders)</span></h3>
+    <div class="timeline">
+      <div class="tl"><div class="d">T0 · Order</div><div class="e">Client signs, pays deposit</div><div class="c in">+ deposit <span class="tbc">[%?]</span></div></div>
+      <div class="tl"><div class="d">T0+days</div><div class="e">We pay supplier for hardware</div><div class="c out">− £<span class="tbc">[kit cost]</span></div></div>
+      <div class="tl"><div class="d">T+2–6 wks</div><div class="e">Install by Get-Services</div><div class="c out">− labour, scaffold</div></div>
+      <div class="tl"><div class="d">T+install</div><div class="e">Commission &amp; sign-off</div><div class="c"></div></div>
+      <div class="tl"><div class="d">T+terms</div><div class="e">Client final payment</div><div class="c in">+ balance</div></div>
+    </div>
+    <div class="callout flag"><b>The gap to model:</b> the trough between paying the supplier for the kit and receiving the client's final payment. Multiply that by the number of jobs running concurrently and you have Headroom's <b>peak cash requirement</b>. Three levers close it: (1) a larger client <b>deposit</b> that covers the kit cost up front; (2) <b>supplier credit terms</b> (30–60 days) so we pay later; (3) a <b>working-capital facility</b> or director funding to bridge. The model should show peak cash under each.</div>
+    <h3>Inputs to pin for the gap</h3>
+    <table>
+      <tr><th>Input</th><th>Why it matters</th><th>Value</th></tr>
+      <tr><td>Client deposit %</td><td>If deposit ≥ kit cost, the gap largely closes</td><td class="tbc">[set]</td></tr>
+      <tr><td>Hardware cost per kWp</td><td>Sizes the upfront outlay</td><td class="tbc">[£/kWp]</td></tr>
+      <tr><td>Supplier payment terms</td><td>Days of credit shrink the trough</td><td class="tbc">[days]</td></tr>
+      <tr><td>Client payment terms (final)</td><td>Days of exposure after sign-off</td><td class="tbc">[days]</td></tr>
+      <tr><td>Concurrent jobs</td><td>Gap × jobs = peak cash need</td><td class="tbc">[n]</td></tr>
+    </table>
+  </section>
+
+  <section class="s">
+    <div class="s-head"><span class="num">3</span><h2>Revenue lines to model</h2></div>
+    <table>
+      <tr><th>Line</th><th>Driver</th><th>Margin source</th><th>Recurring?</th></tr>
+      <tr><td><b>Owned / EPC</b></td><td>System £ value × deals</td><td>Procurement spread on hardware + design + management margin over install cost</td><td>No (one-off)</td></tr>
+      <tr><td><b>Funded / PPA</b></td><td>kWp financed × deals</td><td>Origination fee + finance-partner spread + ongoing management</td><td>Part</td></tr>
+      <tr><td><b>Lease / HP</b></td><td>Deals</td><td>EPC margin + finance introduction</td><td>Part</td></tr>
+      <tr><td><b>Battery / EV add-on</b></td><td>Attach rate × deals</td><td>Same as EPC, lifts deal size</td><td>No</td></tr>
+      <tr><td><b>Maintenance / O&amp;M</b><span class="pill">ARR</span></td><td>Installed base × attach rate</td><td>Recurring fee, tiered Bronze/Silver/Gold</td><td>Yes</td></tr>
+      <tr><td><b>Legacy evaluations</b><span class="pill">front door</span></td><td>Audits sold</td><td>Paid audit fee + conversion to O&amp;M / retrofit</td><td>Leads to ARR</td></tr>
+    </table>
+    <div class="callout">Model the <b>procurement margin explicitly</b> now that we own the hardware: it is a distinct line (buy price vs sell price of the kit), separate from the management margin over Get-Services' install cost. Owning the kit is what earns it.</div>
+  </section>
+
+  <section class="s">
+    <div class="s-head"><span class="num">4</span><h2>Unit economics — worked deal <span style="font-size:12px;color:var(--muted);font-weight:500">(250kWp, illustrative)</span></h2></div>
+    <table>
+      <tr><th>Line</th><th class="num-c">Owned / EPC</th><th class="num-c">Funded / PPA</th></tr>
+      <tr><td>System value to client</td><td class="num-c tbc">£[ ]</td><td class="num-c">£0 upfront</td></tr>
+      <tr><td>Hardware cost (we pay)</td><td class="num-c tbc">£[ ]</td><td class="num-c tbc">£[ ]</td></tr>
+      <tr><td>Procurement margin (hardware)</td><td class="num-c tbc">£[ ]</td><td class="num-c tbc">£[ ]</td></tr>
+      <tr><td>Get-Services install cost</td><td class="num-c tbc">£[ ]</td><td class="num-c tbc">£[ ]</td></tr>
+      <tr><td>Design + management margin</td><td class="num-c tbc">£[ ]</td><td class="num-c tbc">£[ ]</td></tr>
+      <tr><td>Origination fee / finance spread</td><td class="num-c">n/a</td><td class="num-c tbc">£[ ]</td></tr>
+      <tr><td><b>Headroom gross margin / deal</b></td><td class="num-c tbc"><b>£[ ]</b></td><td class="num-c tbc"><b>£[ ]</b></td></tr>
+      <tr><td>+ Recurring O&amp;M (annual)</td><td class="num-c tbc">£[ ]/yr</td><td class="num-c tbc">£[ ]/yr</td></tr>
+    </table>
+  </section>
+
+  <section class="s">
+    <div class="s-head"><span class="num">5</span><h2>Cost base &amp; the ring-fence</h2></div>
+    <ul>
+      <li><b>Direct costs:</b> hardware, install (Get-Services), scaffolding, DNO fees, materials insurance, finance costs on working capital.</li>
+      <li><b>Operating costs:</b> Andy's draw / time, BD &amp; marketing, design tooling, the Headroom intelligence engine, software/CRM, professional fees (legal, insurance, accountancy).</li>
+      <li><b>Overhead allocation:</b> because Headroom runs as a ring-fenced division of BridgePoint, agree a fair share of BridgePoint shared overhead charged to the Division. <span class="flag">This number feeds Division Net Profit, which is what Andy's 50% is calculated on, so set it deliberately.</span></li>
+    </ul>
+  </section>
+
+  <section class="s">
+    <div class="s-head"><span class="num">6</span><h2>Scenarios &amp; the path to £1m</h2></div>
+    <p>Run three cases on deal volume and mix:</p>
+    <table>
+      <tr><th>Case</th><th>Installs (yr 1)</th><th>Mix</th><th>Tests</th></tr>
+      <tr><td>Conservative</td><td class="tbc">[ ]</td><td>Mostly owned EPC</td><td>Does it cover setup + Andy's draw?</td></tr>
+      <tr><td>Base</td><td class="tbc">[ ]</td><td>Owned + funded blend + first O&amp;M</td><td>Contribution to the £1m mandate</td></tr>
+      <tr><td>Stretch</td><td class="tbc">[ ]</td><td>Add multi-site / ground-mount + ARR base</td><td>Peak cash need at volume</td></tr>
+    </table>
+    <div class="callout flag"><b>Watch:</b> in this model, growth consumes cash because every new job needs hardware funded before payment. The stretch case may need the <b>most</b> working capital, not the least. Show peak cash on each case, not just profit.</div>
+  </section>
+
+  <section class="s">
+    <div class="s-head"><span class="num">7</span><h2>Outputs we need from the model</h2></div>
+    <ul>
+      <li>Monthly <b>P&amp;L</b> and <b>cashflow</b> for 12–24 months.</li>
+      <li><b>Peak cash requirement</b> and the month it occurs (under each scenario).</li>
+      <li><b>Break-even</b>: deals and months.</li>
+      <li><b>Division Net Profit</b> (Andy's 50% base) and the BridgePoint-side split.</li>
+      <li><b>ARR build</b>: recurring maintenance revenue accumulating month on month.</li>
+      <li>Sensitivity on the three gap levers (deposit %, supplier terms, facility size).</li>
+    </ul>
+  </section>
+
+  <section class="s">
+    <div class="s-head"><span class="num">8</span><h2>Open questions for Gini</h2></div>
+    <ul>
+      <li>What client <b>deposit %</b> can we realistically ask, and does it cover the kit cost?</li>
+      <li>What <b>supplier credit terms</b> can Andy secure on hardware? (changes the gap most)</li>
+      <li>Do we need a <b>working-capital facility</b>, or is director / BridgePoint funding the bridge at the start?</li>
+      <li>What <b>overhead-allocation basis</b> is fair for the Division (feeds Andy's 50%)?</li>
+      <li>How aggressively do we push the <b>funded/PPA</b> track to avoid carrying hardware at all on those jobs?</li>
+      <li>What year-one <b>install target</b> do we commit to against the £1m mandate?</li>
+    </ul>
+  </section>
+
+  <footer>
+    Headroom Solar · Financial model brief · 5 June 2026 · A brand of BridgePoint AI Ltd · For the modelling session with V. Filmer-Sankey. All figures placeholders. Confidential. ⚔️
+  </footer>
+</div>
+</body>
+</html>
