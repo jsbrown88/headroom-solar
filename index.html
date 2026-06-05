@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Headroom Solar — Your roof. Working for you.</title>
+<meta name="description" content="Commercial solar with zero upfront cost. We turn your roof into a financial engine — lower, fixed energy bills, off balance sheet, verified return. UK businesses, 50kW to 5MW.">
+<meta name="robots" content="noindex,nofollow">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0b1014;--ink:#0f172a;--paper:#ffffff;--muted:#5b6b7a;--line:#e6ebef;
+    --green:#65a30d;--green-dim:#4d7c0f;--green-bg:#ecfccb;
+    --solar:#f59e0b;--solar-dim:#d97706;--solar-bg:#fff7e6;
+    --sky:#0ea5e9;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;border-radius:999px;padding:14px 26px;cursor:pointer;border:none;transition:transform .12s ease,box-shadow .12s ease}
+  .btn-solar{background:linear-gradient(135deg,var(--solar),var(--solar-dim));color:#fff;box-shadow:0 8px 24px rgba(217,119,6,.35)}
+  .btn-solar:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(217,119,6,.45)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{transform:translateY(-2px)}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:60;background:rgba(11,16,20,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{display:flex;align-items:center;gap:11px;color:#fff;font-weight:800;font-size:19px;letter-spacing:-.01em}
+  .logo .mk{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--solar),var(--green-dim));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px}
+  .logo span{color:var(--solar)}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{color:#cdd7df;font-size:14.5px;font-weight:500}
+  .nav-links a:hover{color:#fff}
+  .nav-links .btn{padding:9px 18px;font-size:14px}
+  @media(max-width:780px){.nav-links a:not(.btn){display:none}}
+
+  /* HERO */
+  .hero{position:relative;background:radial-gradient(circle at 78% 8%,rgba(245,158,11,.22),transparent 42%),radial-gradient(circle at 12% 92%,rgba(101,163,13,.18),transparent 45%),linear-gradient(180deg,#0b1014,#0f1a14);color:#fff;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent);opacity:.6}
+  .hero .wrap{position:relative;z-index:2;padding:84px 26px 92px;max-width:980px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--solar);background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);padding:7px 14px;border-radius:999px}
+  .hero h1{font-size:clamp(38px,6.4vw,68px);line-height:1.04;letter-spacing:-.03em;font-weight:800;margin:22px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--solar);position:relative}
+  .hero .sub{font-size:clamp(17px,2.4vw,21px);color:#c6d2db;max-width:680px;font-weight:400}
+  .hero .sub b{color:#fff;font-weight:600}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .hero-note{margin-top:18px;font-size:13.5px;color:#8ea1ae}
+  .hero-note b{color:#e7eef3}
+
+  /* TRUST STRIP */
+  .trust{background:#0f1a14;color:#9fb0a6;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+  .trust .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 40px;padding:18px 26px;font-size:13.5px;font-weight:600;letter-spacing:.02em}
+  .trust .dot{color:var(--solar)}
+
+  /* SECTION */
+  section.blk{padding:84px 0}
+  .kicker{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-dim)}
+  .h2{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.02em;font-weight:800;margin:12px 0 14px;max-width:760px}
+  .lead{font-size:17.5px;color:var(--muted);max-width:680px}
+
+  /* PROBLEM/PROMISE split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:20px;overflow:hidden;border:1px solid var(--line);margin-top:42px}
+  .split>div{padding:40px 38px}
+  .split .liab{background:#fbfcfd}
+  .split .eng{background:linear-gradient(160deg,#0f1a14,#13251a);color:#fff}
+  .split h3{font-size:22px;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
+  .split .liab h3{color:var(--ink)}
+  .split .tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+  .split .liab .tag{color:#b91c1c}
+  .split .eng .tag{color:var(--solar)}
+  .split ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:12px}
+  .split li{display:flex;gap:11px;font-size:15.5px;align-items:flex-start}
+  .split .liab li{color:#475569}
+  .split .eng li{color:#d4e0d8}
+  .split li .ic{flex:none;width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;margin-top:1px}
+  .split .liab li .ic{background:#fee2e2;color:#b91c1c}
+  .split .eng li .ic{background:rgba(245,158,11,.18);color:var(--solar)}
+  @media(max-width:760px){.split{grid-template-columns:1fr}}
+
+  /* VALUE CARDS */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:46px}
+  .vc{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px 26px;transition:transform .12s ease,box-shadow .12s ease}
+  .vc:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,23,42,.08)}
+  .vc .ico{width:46px;height:46px;border-radius:12px;background:var(--solar-bg);color:var(--solar-dim);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+  .vc h4{font-size:18px;font-weight:800;letter-spacing:-.01em;margin-bottom:7px}
+  .vc p{font-size:14.5px;color:var(--muted)}
+
+  /* STATS */
+  .stats{background:linear-gradient(135deg,#0f1a14,#0b1014);color:#fff}
+  .stats .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px;text-align:center}
+  .stat .n{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-.02em;background:linear-gradient(135deg,#fde68a,var(--solar));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat .l{font-size:14px;color:#9fb0a6;margin-top:6px;font-weight:500}
+
+  /* HOW */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:46px}
+  .step{position:relative;padding:30px 26px;border:1px solid var(--line);border-radius:16px;background:#fbfcfd}
+  .step .num{position:absolute;top:-16px;left:24px;width:38px;height:38px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px}
+  .step h4{font-size:17px;font-weight:800;margin:14px 0 7px}
+  .step p{font-size:14px;color:var(--muted)}
+
+  /* INTELLIGENCE feature */
+  .feat{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .feat .panel{background:linear-gradient(160deg,#0f1a14,#13251a);border-radius:20px;padding:30px;color:#fff;border:1px solid rgba(255,255,255,.08)}
+  .feat .panel .pill{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--solar);background:rgba(245,158,11,.14);padding:5px 11px;border-radius:999px;margin-bottom:18px}
+  .gauge{display:flex;flex-direction:column;gap:16px;margin-top:6px}
+  .gauge .g .gt{display:flex;justify-content:space-between;font-size:13px;color:#c6d2db;margin-bottom:6px}
+  .gauge .g .gt b{color:#fff}
+  .gauge .bar{height:9px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
+  .gauge .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--green),var(--solar))}
+  @media(max-width:820px){.feat{grid-template-columns:1fr;gap:30px}}
+
+  /* CTA band */
+  .cta-band{background:linear-gradient(135deg,var(--solar),var(--solar-dim));color:#fff;border-radius:24px;padding:56px 44px;text-align:center;margin:0 auto}
+  .cta-band h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+  .cta-band p{font-size:17px;opacity:.95;margin:12px auto 26px;max-width:560px}
+  .cta-band .btn-dark{background:#0b1014}
+
+  /* FORM */
+  form.lead-form{max-width:560px;margin:36px auto 0;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 16px 44px rgba(15,23,42,.06)}
+  form.lead-form .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:560px){form.lead-form .grid2{grid-template-columns:1fr}}
+  form.lead-form label{font-size:12.5px;font-weight:700;color:#475569;display:block;margin:0 0 5px}
+  form.lead-form input,form.lead-form select{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:10px;font-size:14.5px;font-family:inherit;margin-bottom:14px;background:#fff}
+  form.lead-form input:focus,form.lead-form select:focus{outline:none;border-color:var(--solar)}
+  form.lead-form .btn{width:100%;justify-content:center;margin-top:4px}
+
+  /* FOOTER */
+  footer.site{background:#0b1014;color:#8ea1ae;padding:50px 0 34px;font-size:14px}
+  footer.site .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08)}
+  footer.site .logo{font-size:17px}
+  footer.site .bp{font-size:13px;color:#6b7d8a;margin-top:22px}
+  footer.site .bp b{color:#aebcc7}
+  .center{text-align:center;display:flex;flex-direction:column;align-items:center}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="mk">H</span>Head<span>room</span></a>
+    <div class="nav-links">
+      <a href="#why">Why solar now</a>
+      <a href="#how">How it works</a>
+      <a href="#intel">Site intelligence</a>
+      <a href="#healthcheck">Already have solar?</a>
+      <a class="btn btn-solar" href="#audit">Get your free roof audit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">⚡ Commercial solar · zero upfront cost</span>
+    <h1>Your roof is either a liability<br>— or your most powerful <em>financial engine</em>.</h1>
+    <p class="sub">Headroom turns commercial roofs into <b>lower, fixed, predictable energy bills</b>. No capital from you. Off your balance sheet. A verified return on the one asset you already own and aren't using.</p>
+    <div class="hero-cta">
+      <a class="btn btn-solar" href="#audit">Get your free roof audit →</a>
+      <a class="btn btn-ghost" href="#how">See how it works</a>
+    </div>
+    <p class="hero-note"><b>£0 upfront</b> &nbsp;·&nbsp; <b>30–50%</b> below grid &nbsp;·&nbsp; price locked for <b>up to 25 years</b> &nbsp;·&nbsp; UK businesses, <b>50kW to 5MW</b></p>
+  </div>
+</header>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <span><span class="dot">●</span> Funded or owned</span>
+    <span><span class="dot">●</span> MCS-accredited installation</span>
+    <span><span class="dot">●</span> Finance-led, not sales-led</span>
+    <span><span class="dot">●</span> Led by Stratford Energy founders</span>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="blk" id="why">
+  <div class="wrap">
+    <div class="kicker">The boardroom case</div>
+    <h2 class="h2">Energy stopped being an overhead. It became a risk you can fix.</h2>
+    <p class="lead">Volatile wholesale prices have moved solar from the sustainability report to the finance director's desk. Here is the honest before-and-after.</p>
+
+    <div class="split">
+      <div class="liab">
+        <span class="tag">Roof today — a silent liability</span>
+        <h3>Costing you, doing nothing</h3>
+        <ul>
+          <li><span class="ic">↑</span> Exposed to every grid price shock and bill rise</li>
+          <li><span class="ic">£</span> Tens of thousands a year leaving the business</li>
+          <li><span class="ic">∅</span> Empty square metres earning zero</li>
+          <li><span class="ic">?</span> No control, no certainty, no hedge</li>
+        </ul>
+      </div>
+      <div class="eng">
+        <span class="tag">Roof with Headroom — a financial engine</span>
+        <h3>Working for you, every daylight hour</h3>
+        <ul>
+          <li><span class="ic">✓</span> Power at <b>30–50% below grid</b>, generated on site</li>
+          <li><span class="ic">✓</span> Price <b>locked for up to 25 years</b> — a real hedge</li>
+          <li><span class="ic">✓</span> <b>Zero capital</b> option, kept off your balance sheet</li>
+          <li><span class="ic">✓</span> A verified return, plus the net-zero box ticked</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE CARDS -->
+<section class="blk" style="background:#fbfcfd;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">Why finance directors choose Headroom</div>
+    <h2 class="h2">Built for the people who sign the cheque.</h2>
+    <div class="cards">
+      <div class="vc"><div class="ico">£0</div><h4>Zero upfront cost</h4><p>Our funded route means no capital outlay. You pay only for the power you use, at a rate below the grid, from day one.</p></div>
+      <div class="vc"><div class="ico">⚖️</div><h4>Off balance sheet</h4><p>Structured as operating expenditure, not a capital project. It doesn't tie up cash or eat into your borrowing capacity.</p></div>
+      <div class="vc"><div class="ico">🔒</div><h4>Price certainty</h4><p>Lock your generation rate for up to 25 years and stop guessing what energy will cost. A hedge you can actually plan around.</p></div>
+      <div class="vc"><div class="ico">📈</div><h4>Verified return</h4><p>Every proposal is modelled on your real load and roof. No vague promises — a payback and ROI you can take to the board.</p></div>
+      <div class="vc"><div class="ico">🛡️</div><h4>Energy independence</h4><p>Generate your own clean British power and cut your exposure to markets you can't control. Resilience, not just savings.</p></div>
+      <div class="vc"><div class="ico">⚡</div><h4>Fast and light</h4><p>One survey, one proposal, one accountable team. We design and manage; accredited crews install. No drawn-out runaround.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="blk stats">
+  <div class="wrap">
+    <div class="row">
+      <div class="stat"><div class="n">£0</div><div class="l">Upfront cost on funded installs</div></div>
+      <div class="stat"><div class="n">30–50%</div><div class="l">Typical saving vs grid price</div></div>
+      <div class="stat"><div class="n">25 yrs</div><div class="l">Price certainty you can lock in</div></div>
+      <div class="stat"><div class="n">50kW–5MW</div><div class="l">Commercial systems we deliver</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTELLIGENCE -->
+<section class="blk" id="intel">
+  <div class="wrap">
+    <div class="feat">
+      <div>
+        <div class="kicker">Our unfair advantage</div>
+        <h2 class="h2" style="font-size:clamp(26px,3.4vw,36px)">We know what your roof can do — before we even speak.</h2>
+        <p class="lead">Most installers turn up and guess. Headroom runs your site through our own intelligence engine first: grid headroom, roof yield, daytime load and payback. You get a straight answer, fast — and we never sell you a system that doesn't pay.</p>
+        <div style="margin-top:24px"><a class="btn btn-dark" href="#audit">Run my site →</a></div>
+      </div>
+      <div class="panel">
+        <span class="pill">Headroom site report · sample</span>
+        <div style="font-size:15px;color:#c6d2db;margin-bottom:4px">Unit 4, Midlands Distribution Park</div>
+        <div style="font-size:13px;color:#7f9387;margin-bottom:18px">Warehouse · 6,400 m² roof</div>
+        <div class="gauge">
+          <div class="g"><div class="gt"><span>Grid headroom for export</span><b>Strong</b></div><div class="bar"><div class="fill" style="width:84%"></div></div></div>
+          <div class="g"><div class="gt"><span>Roof solar yield</span><b>Excellent</b></div><div class="bar"><div class="fill" style="width:91%"></div></div></div>
+          <div class="g"><div class="gt"><span>Daytime load match</span><b>High</b></div><div class="bar"><div class="fill" style="width:78%"></div></div></div>
+          <div class="g"><div class="gt"><span>Indicative payback</span><b>Fast</b></div><div class="bar"><div class="fill" style="width:88%"></div></div></div>
+        </div>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:13.5px;color:#9fb0a6">Verdict: <b style="color:#fff">strong candidate.</b> ~520kWp, est. 30–45% bill reduction, funded route available.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="blk" id="how" style="background:#fbfcfd;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">How it works</div>
+    <h2 class="h2">From roof to running. Four steps, no drama.</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h4>Free roof audit</h4><p>Tell us your site. Our engine scores its solar potential and payback within days — no obligation.</p></div>
+      <div class="step"><div class="num">2</div><h4>Funded proposal</h4><p>A clear board-ready proposal: owned or funded, savings, ROI and the route that fits your balance sheet.</p></div>
+      <div class="step"><div class="num">3</div><h4>Design &amp; install</h4><p>We handle design, grid approval and project management. Accredited crews install to standard.</p></div>
+      <div class="step"><div class="num">4</div><h4>Generate &amp; save</h4><p>Your roof starts paying you back from switch-on, with monitoring and O&amp;M handled.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT / CTA -->
+<section class="blk" id="audit">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Find out what your roof is worth.</h2>
+      <p>A free Headroom audit tells you the saving, the payback and the funded option — in days, with no commitment.</p>
+      <a class="btn btn-dark" href="#form">Get my free roof audit →</a>
+    </div>
+
+    <form class="lead-form" id="form" onsubmit="event.preventDefault();this.innerHTML='<div class=&quot;center&quot;><h3 style=&quot;font-size:20px;margin-bottom:8px&quot;>Thank you ⚡</h3><p style=&quot;color:#5b6b7a&quot;>We will run your site and come back within two working days.</p></div>'">
+      <div class="grid2">
+        <div><label>Your name</label><input required placeholder="Jane Smith"></div>
+        <div><label>Company</label><input required placeholder="Company Ltd"></div>
+      </div>
+      <div class="grid2">
+        <div><label>Work email</label><input type="email" required placeholder="jane@company.co.uk"></div>
+        <div><label>Phone</label><input placeholder="07…"></div>
+      </div>
+      <div class="grid2">
+        <div><label>Site postcode</label><input required placeholder="B1 1AA"></div>
+        <div><label>Approx. annual electricity spend</label>
+          <select><option>Under £50k</option><option>£50k–£150k</option><option>£150k–£500k</option><option>£500k+</option></select>
+        </div>
+      </div>
+      <button class="btn btn-solar" type="submit">Run my free roof audit →</button>
+    </form>
+  </div>
+</section>
+
+<!-- HEALTH CHECK -->
+<section class="blk" id="healthcheck" style="background:#fbfcfd;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="feat">
+      <div>
+        <div class="kicker">Already have solar?</div>
+        <h2 class="h2" style="font-size:clamp(26px,3.4vw,36px)">Is your existing system actually earning its keep?</h2>
+        <p class="lead">Most commercial systems quietly underperform — failed panels, ageing inverters, dead monitoring, missed savings. Many were fitted by installers who have since vanished. Our independent <b>health-check</b> tells you what it's really producing, what it should be, and what's costing you.</p>
+        <ul style="list-style:none;margin:22px 0 26px;display:flex;flex-direction:column;gap:12px">
+          <li style="display:flex;gap:11px;font-size:15.5px;color:#334155"><span style="flex:none;width:22px;height:22px;border-radius:6px;background:var(--green-bg);color:var(--green-dim);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;margin-top:1px">✓</span> Performance vs design — what you're losing</li>
+          <li style="display:flex;gap:11px;font-size:15.5px;color:#334155"><span style="flex:none;width:22px;height:22px;border-radius:6px;background:var(--green-bg);color:var(--green-dim);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;margin-top:1px">✓</span> Safety &amp; compliance — isolators, fire risk, earthing</li>
+          <li style="display:flex;gap:11px;font-size:15.5px;color:#334155"><span style="flex:none;width:22px;height:22px;border-radius:6px;background:var(--green-bg);color:var(--green-dim);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;margin-top:1px">✓</span> Maintenance &amp; monitoring you can hand to one team</li>
+        </ul>
+        <a class="btn btn-dark" href="#hc-form">Book a free health-check →</a>
+      </div>
+      <div class="panel">
+        <span class="pill">Health-check · sample finding</span>
+        <div style="font-size:15px;color:#c6d2db;margin-bottom:4px">Existing 180kWp rooftop array</div>
+        <div style="font-size:13px;color:#7f9387;margin-bottom:18px">Installed 2019 · no service since</div>
+        <div class="gauge">
+          <div class="g"><div class="gt"><span>Output vs design</span><b style="color:#fca5a5">−22%</b></div><div class="bar"><div class="fill" style="width:78%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div></div>
+          <div class="g"><div class="gt"><span>String faults found</span><b>3</b></div><div class="bar"><div class="fill" style="width:35%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div></div>
+          <div class="g"><div class="gt"><span>Monitoring</span><b style="color:#fca5a5">Offline</b></div><div class="bar"><div class="fill" style="width:12%;background:#ef4444"></div></div></div>
+          <div class="g"><div class="gt"><span>Safety check</span><b>Action needed</b></div><div class="bar"><div class="fill" style="width:55%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div></div>
+        </div>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:13.5px;color:#9fb0a6">Recoverable: <b style="color:#fff">~£9,400/yr</b> of lost generation, fixable under a service plan.</div>
+      </div>
+    </div>
+
+    <form class="lead-form" id="hc-form" onsubmit="event.preventDefault();this.innerHTML='<div class=&quot;center&quot;><h3 style=&quot;font-size:20px;margin-bottom:8px&quot;>Thank you ⚡</h3><p style=&quot;color:#5b6b7a&quot;>We will be in touch to book your health-check within two working days.</p></div>'">
+      <div class="grid2">
+        <div><label>Your name</label><input required placeholder="Jane Smith"></div>
+        <div><label>Company</label><input required placeholder="Company Ltd"></div>
+      </div>
+      <div class="grid2">
+        <div><label>Work email</label><input type="email" required placeholder="jane@company.co.uk"></div>
+        <div><label>Site postcode</label><input required placeholder="B1 1AA"></div>
+      </div>
+      <div class="grid2">
+        <div><label>Approx. system size (if known)</label><input placeholder="e.g. 180kWp"></div>
+        <div><label>Year installed (if known)</label><input placeholder="e.g. 2019"></div>
+      </div>
+      <button class="btn btn-solar" type="submit">Book my free health-check →</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="#top"><span class="mk">H</span>Head<span>room</span></a>
+      <div style="display:flex;gap:30px;flex-wrap:wrap">
+        <a href="#why">Why solar now</a>
+        <a href="#how">How it works</a>
+        <a href="#intel">Site intelligence</a>
+        <a href="#healthcheck">Already have solar?</a>
+        <a href="#audit">Free roof audit</a>
+      </div>
+    </div>
+    <p class="bp">Headroom is a commercial solar brand of <b>BridgePoint AI</b>. Installations delivered by accredited partners. Commercial solar across the UK, 50kW to 5MW. © 2026 Headroom.</p>
+  </div>
+</footer>
+
+</body>
+</html>
