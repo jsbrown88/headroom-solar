@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Headroom Solar — Business Plan (Draft v0.1)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#fafbfc;--panel:#fff;--panel-2:#f1f5f9;--border:#e2e8f0;--text:#0f172a;--muted:#64748b;
+    --accent:#65a30d;--accent-dim:#4d7c0f;--accent-bg:#ecfccb;--green:#16a34a;--amber:#ea580c;
+    --solar:#f59e0b;--solar-bg:#fef3c7;--vir:#1d4ed8;--mark:#c2410c;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;background-image:radial-gradient(circle at 88% -8%,rgba(245,158,11,.10),transparent 46%),radial-gradient(circle at 0% 108%,rgba(101,163,13,.06),transparent 48%)}
+  header.app{padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--border);background:rgba(250,251,252,.92);backdrop-filter:blur(8px);position:sticky;top:0;z-index:50;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+  .brand-mark{width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,var(--solar),var(--accent-dim));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:15px}
+  .brand-name{font-size:18px}.brand-name span{color:var(--accent)}
+  .badge-conf{font-size:11px;font-weight:700;color:var(--mark);border:1px solid var(--mark);border-radius:999px;padding:3px 10px}
+  .container{max-width:1000px;margin:0 auto;padding:34px 28px 90px}
+  .doc-badge{font-size:11px;padding:4px 10px;border-radius:999px;background:var(--solar-bg);color:#92400e;border:1px solid rgba(245,158,11,.35);font-weight:600;letter-spacing:.04em;display:inline-block;margin-bottom:14px}
+  h1{font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1.12;margin-bottom:12px}
+  h1 .accent{color:var(--accent)}
+  .lead{color:var(--muted);font-size:15.5px;max-width:780px}
+  .meta{font-size:12.5px;color:var(--muted);margin-top:14px}
+  .meta b{color:var(--text)}
+  .toc{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 6px}
+  .toc a{font-size:12.5px;text-decoration:none;color:var(--accent-dim);border:1px solid var(--border);background:#fff;border-radius:999px;padding:5px 12px;font-weight:600}
+  .toc a:hover{border-color:var(--accent)}
+  section.s{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:24px 26px;margin:20px 0;box-shadow:0 1px 3px rgba(15,23,42,.04)}
+  .s-head{display:flex;align-items:center;gap:11px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+  .s-head .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:none}
+  .s-head h2{font-size:20px;font-weight:700;letter-spacing:-.01em}
+  h3{font-size:15px;font-weight:700;margin:16px 0 7px}
+  p{margin:8px 0;font-size:14.5px}
+  ul,ol{margin:8px 0 8px 22px}
+  li{margin:5px 0;font-size:14.5px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:14px 0}
+  .card{background:var(--panel-2);border:1px solid var(--border);border-radius:11px;padding:15px 16px}
+  .card .k{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700;margin-bottom:6px}
+  .card .v{font-size:14px;font-weight:600}
+  .card .v b{color:var(--accent-dim)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:top}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:var(--panel-2)}
+  .callout{margin:16px 0;padding:14px 16px;border-radius:12px;background:var(--accent-bg);border:1px solid rgba(101,163,13,.3);font-size:13.8px;color:#3f5806}
+  .callout.solar{background:var(--solar-bg);border-color:rgba(245,158,11,.35);color:#7c2d12}
+  .callout.warn{background:#fff7ed;border-color:#fed7aa;color:#9a3412}
+  .callout b{color:inherit}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--solar-bg);color:#92400e;margin-left:6px}
+  .q{font-weight:600;color:var(--text)}
+  .owner{font-size:11px;font-weight:700;color:#fff;background:var(--accent-dim);border-radius:5px;padding:1px 7px;margin-left:6px}
+  footer{max-width:1000px;margin:0 auto;padding:10px 28px 60px;color:var(--muted);font-size:12.5px}
+  .draft{color:var(--mark);font-weight:700}
+</style>
+</head>
+<body>
+<header class="app">
+  <div class="brand"><div class="brand-mark">H</div><div class="brand-name">Head<span>room</span> Solar</div></div>
+  <div class="badge-conf">CONFIDENTIAL · DRAFT v0.1 · STANLEY-ONLY</div>
+</header>
+
+<div class="container">
+  <span class="doc-badge">BUSINESS PLAN · COMMERCIAL SOLAR · 2026-06-05</span>
+  <h1>Headroom Solar <span class="accent">—</span> turning commercial roofs into financial engines</h1>
+  <p class="lead">A capital-light commercial solar venture launched as a brand of BridgePoint AI, delivered through Get-Services installation capacity, qualified by Headroom's own grid-intelligence engine, and led by Stratford Energy co-founder Andy Hollis.</p>
+  <div class="meta">
+    <b>Prepared by:</b> Jedi / BridgePoint AI &nbsp;·&nbsp; <b>For:</b> Mark Evans-Smith, Virginia Filmer-Sankey, Kevin Doyle, Andy Hollis &nbsp;·&nbsp; <b>Date:</b> 5 June 2026 &nbsp;·&nbsp; <span class="draft">STATUS: First draft for discussion — figures are placeholders pending model.</span>
+  </div>
+
+  <div class="toc">
+    <a href="#summary">1 · Summary</a>
+    <a href="#why">2 · Why now</a>
+    <a href="#offer">3 · The offer</a>
+    <a href="#edge">4 · The edge</a>
+    <a href="#brand">5 · Brand &amp; structure</a>
+    <a href="#andy">6 · Andy's 50%</a>
+    <a href="#ops">7 · Operations</a>
+    <a href="#delivery">8 · Get-Services model</a>
+    <a href="#journey">✦ · Client journey</a>
+    <a href="#service">⟳ · Service &amp; maintenance</a>
+    <a href="#gtm">9 · Go-to-market</a>
+    <a href="#money">10 · Money</a>
+    <a href="#risk">11 · Risks</a>
+    <a href="#plan">12 · 90-day plan</a>
+    <a href="#questions">13 · Open questions</a>
+  </div>
+
+  <!-- 1 -->
+  <section class="s" id="summary">
+    <div class="s-head"><span class="num">1</span><h2>Executive summary</h2></div>
+    <p>Headroom Solar designs, finances and delivers commercial rooftop and ground-mount solar (and battery) for UK businesses in the <b>50kW to 5MW</b> band. We lead with the boardroom case, not the green case: solar as an off-balance-sheet hedge against energy price volatility and a verified return on a building's most under-used asset, its roof.</p>
+    <p>We launch <b>fast and light</b>. No new legal entity at outset, no in-house installation crews, no fleet. Headroom runs as a ring-fenced brand and division of BridgePoint AI Ltd. Installations are subcontracted to <b>Russell Smith / Get-Services</b> while we prove pipeline. Sales are accelerated by a tool the competition does not have: the <b>Headroom site-intelligence engine</b>, which pre-qualifies a site's grid headroom, roof yield and payback before a salesperson ever picks up the phone.</p>
+    <div class="grid">
+      <div class="card"><div class="k">Market position</div><div class="v">Commercial solar, <b>50kW–5MW</b></div></div>
+      <div class="card"><div class="k">Model</div><div class="v">Brand of BridgePoint AI · <b>asset-light</b></div></div>
+      <div class="card"><div class="k">Delivery</div><div class="v">Subcontracted via <b>Get-Services</b></div></div>
+      <div class="card"><div class="k">Unfair advantage</div><div class="v">Headroom <b>grid-intelligence</b> engine</div></div>
+    </div>
+    <div class="callout solar"><b>Strategic insight.</b> The name does double duty. "Headroom" is the spare grid capacity a site has for solar <i>and</i> the financial headroom solar creates by cutting the bill. Same word, both halves of the buying decision. That is the whole pitch in one word.</div>
+  </section>
+
+  <!-- 2 -->
+  <section class="s" id="why">
+    <div class="s-head"><span class="num">2</span><h2>Why now</h2></div>
+    <ul>
+      <li><b>Energy is now a board-level risk, not a CSR line.</b> Rising and volatile wholesale prices have moved the conversation from the sustainability officer to the Finance Director.</li>
+      <li><b>Solar reframed as national and economic security.</b> 2026 policy direction frames clean British generation as protection against weaponised energy markets — this is top-air-cover for the buyer.</li>
+      <li><b>Funded structures remove the capital objection.</b> PPA and lease models let businesses take solar with zero upfront cost, off balance sheet, paying for power at 30–50% below grid.</li>
+      <li><b>Demand is spiking.</b> Installers report sharp rises in enquiry through 2026 as price shocks hit. The window to move ahead of the crowd is narrowing.</li>
+      <li><b>We already have the pieces.</b> A credible operator (Andy), a delivery partner (Get-Services), a brand and domain (Headroom), a finance brain (Gini), a dealmaker (Mark), an investor-grade backer (Kevin) and a qualification tool already built.</li>
+    </ul>
+  </section>
+
+  <!-- 3 -->
+  <section class="s" id="offer">
+    <div class="s-head"><span class="num">3</span><h2>The offer</h2></div>
+    <p>One simple promise to a commercial owner: <b>your roof either costs you money or makes you money. We make it make money — with no capital from you.</b></p>
+    <table>
+      <tr><th>Track</th><th>What the client pays</th><th>Best for</th><th>Our margin from</th></tr>
+      <tr><td><b>Funded / PPA</b><span class="pill">lead offer</span></td><td>£0 upfront. Buys power at a fixed discount to grid for 15–25 yrs.</td><td>FD-led, cash-conscious, multi-site occupiers</td><td>Origination fee + finance partner spread + O&amp;M</td></tr>
+      <tr><td><b>Owned / CapEx</b></td><td>Buys the system; keeps 100% of savings &amp; ROI (15–25%+).</td><td>Cash-rich owner-occupiers, capital allowances appetite</td><td>EPC margin on design + supply + install</td></tr>
+      <tr><td><b>Lease / hire-purchase</b></td><td>Fixed monthly, owns asset at term end.</td><td>Mid-market wanting ownership without upfront hit</td><td>EPC margin + finance introduction</td></tr>
+    </table>
+    <p>Add-ons that lift deal size and stickiness: <b>battery storage</b>, <b>EV charging</b>, <b>O&amp;M contracts</b>, <b>monitoring</b>, and a <b>Headroom audit</b> as a paid or free front door.</p>
+  </section>
+
+  <!-- 4 -->
+  <section class="s" id="edge">
+    <div class="s-head"><span class="num">4</span><h2>The edge — why we win, fast and light</h2></div>
+    <div class="grid">
+      <div class="card"><div class="k">Intelligence, not cold calls</div><div class="v">The Headroom engine scores a site's grid headroom, roof yield and payback before contact. We arrive with the answer.</div></div>
+      <div class="card"><div class="k">Operator credibility</div><div class="v">Andy Hollis — Stratford Energy co-founder. Real track record buys trust the day-one brand cannot.</div></div>
+      <div class="card"><div class="k">Asset-light delivery</div><div class="v">Get-Services carries crews, vans, MCS and risk. We carry brand, design and the client relationship.</div></div>
+      <div class="card"><div class="k">Finance-led pitch</div><div class="v">We speak FD: OpEx, off balance sheet, hedge, ROI. Not panels and kilowatts.</div></div>
+      <div class="card"><div class="k">Ecosystem pull</div><div class="v">BridgePoint, HH, NZP and Kevin's network are warm routes to roofs already in our orbit.</div></div>
+      <div class="card"><div class="k">Brand, not entity</div><div class="v">Launch in days, not weeks. No incorporation gate to clear before selling.</div></div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="s" id="brand">
+    <div class="s-head"><span class="num">5</span><h2>Brand &amp; legal structure</h2></div>
+    <p>Headroom launches as a <b>trading brand / division of BridgePoint AI Ltd</b>, not a new company. BridgePoint contracts, invoices, banks and insures the activity. This keeps us inside an existing entity (as you want) and gives us the Headroom name and domain immediately.</p>
+    <h3>The ring-fence</h3>
+    <p>To make a "division" real and to make Andy's 50% meaningful, we ring-fence Headroom inside BridgePoint: a separate cost/revenue ledger, its own bank sub-account or clear cost-centre coding, and a one-page <b>Headroom Division Charter</b> that records ownership of economics, decision rights and the path to a future NewCo.</p>
+    <div class="callout warn"><b>Watch-out.</b> Running solar EPC inside BridgePoint AI mingles a regulated, insured, physical-works liability with a software/advisory company. Confirm with the insurer and accountant that this does not breach BridgePoint's PI/PL cover or change its risk profile. If it does, the fast alternative is a thin <b>Headroom Energy Ltd</b> later — but we do <i>not</i> need it to start selling.</div>
+  </section>
+
+  <!-- 6 -->
+  <section class="s" id="andy">
+    <div class="s-head"><span class="num">6</span><h2>Giving Andy 50% — without a new entity</h2></div>
+    <p>The question is really: <b>50% of what?</b> "The brand" can mean three different things, and conflating them is where partnerships go wrong. Separate them:</p>
+    <table>
+      <tr><th>What "50%" could mean</th><th>Mechanism</th><th>Speed</th><th>Verdict</th></tr>
+      <tr><td><b>50% of the economics</b> (the profit the Headroom division throws off)</td><td>Written <b>Profit-Share / JV Deed</b> between BridgePoint AI Ltd and Andy: net profit of the Headroom division split 50/50 after defined cost recovery.</td><td>Days</td><td><b>Recommended start.</b> Gives Andy real 50% upside now, no Companies House, no equity dilution of BridgePoint.</td></tr>
+      <tr><td><b>50% of the brand IP</b> (the Headroom name/marks)</td><td>Co-ownership or licence of the trade mark. Messy while the name also belongs to BridgePoint's wider Headroom tool.</td><td>Weeks</td><td>Avoid for now. Keep IP with BridgePoint; licence its use into the division.</td></tr>
+      <tr><td><b>50% of a company</b> (shares in Headroom Ltd)</td><td>Incorporate Headroom Energy Ltd, 50% Andy / 50% BridgePoint, shareholders' agreement.</td><td>Weeks + ongoing admin</td><td>The future state. Give Andy a contractual <b>option to convert</b> his profit-share into 50% equity on incorporation.</td></tr>
+    </table>
+    <h3>Recommended path — "economic now, equity later"</h3>
+    <ol>
+      <li><b>Profit-Share Deed today.</b> Andy gets 50% of Headroom division net profit. BridgePoint's consideration = the Headroom brand, domain, intelligence engine, finance/BD machine and working capital. Andy's consideration = sector expertise, Stratford track record, delivery oversight and origination.</li>
+      <li><b>Vesting.</b> The 50% vests over time or against milestones (e.g. 25% on signature, balance over 12–24 months / against pipeline) so a short tenure does not lock in half the value. Add good-leaver / bad-leaver terms.</li>
+      <li><b>Option to equitise.</b> Andy holds a written right to convert to 50% of Headroom Energy Ltd on incorporation, on the same economic terms — triggered when revenue justifies a standalone entity.</li>
+      <li><b>Decision rights.</b> Define who decides what: Andy leads delivery/technical/operations; BridgePoint (Mark/Gini) leads finance, brand and capital. 50/50 economics need not mean 50/50 control — spell it out to avoid deadlock.</li>
+      <li><b>Document it.</b> A short JV/Founder Deed and the Division Charter. Cheap legal now prevents an expensive divorce later.</li>
+    </ol>
+    <div class="callout"><b>Why this is the right shape.</b> Andy gets the upside and the title that motivate a founder, today, with no entity gate. BridgePoint keeps its cap table clean and its IP intact. Everyone has a clear, written path to a 50/50 company once the numbers earn it. Kevin and the wider founders sit on the BridgePoint side of the 50% — define their split <i>within</i> BridgePoint's half separately, so Andy never has to negotiate with four people.</div>
+  </section>
+
+  <!-- 7 -->
+  <section class="s" id="ops">
+    <div class="s-head"><span class="num">7</span><h2>Operational requirements</h2></div>
+    <p>Even asset-light, commercial solar carries real obligations. What we need, and who carries it:</p>
+    <table>
+      <tr><th>Area</th><th>Requirement</th><th>Carried by</th></tr>
+      <tr><td>Accreditation</td><td><b>MCS</b> (for sub-50kW / incentives), competent-person scheme, NICEIC/NAPIT electrical</td><td>Get-Services (verify scope)</td></tr>
+      <tr><td>Grid</td><td><b>DNO applications</b> — G98 (small) / G99 (larger) connection &amp; export approval</td><td>Headroom design + DNO liaison</td></tr>
+      <tr><td>Safety / law</td><td><b>CDM 2015</b> duties, working-at-height, RAMS, scaffolding, structural roof survey</td><td>Get-Services as principal contractor</td></tr>
+      <tr><td>Insurance</td><td>Professional indemnity, public/products liability, contractors all-risk</td><td>BridgePoint (advisory) + Get-Services (works)</td></tr>
+      <tr><td>Design</td><td>Roof load/structural sign-off, shading/yield modelling, single-line diagrams, O&amp;M plan</td><td>Headroom + engineer of record</td></tr>
+      <tr><td>Standards</td><td>BS 7671, IEC 61215/61730 panels, half-hourly metering, warranty pass-through</td><td>Shared</td></tr>
+      <tr><td>Contracts</td><td>Client EPC/PPA contract, Get-Services subcontract, supplier terms, finance-partner agreement</td><td>BridgePoint legal</td></tr>
+    </table>
+    <div class="callout warn"><b>Non-negotiable before first install:</b> confirm Get-Services' accreditations, insurance limits and who is named principal contractor under CDM. This is where asset-light ventures get hurt. Liability must sit with the party doing the works, with us indemnified and named on cover.</div>
+  </section>
+
+  <!-- 8 -->
+  <section class="s" id="delivery">
+    <div class="s-head"><span class="num">8</span><h2>The Get-Services delivery model</h2></div>
+    <p>Russell Smith / Get-Services is our <b>installation labour</b> engine until volume justifies our own capability. The model is deliberate: <b>Headroom owns the client end-to-end and procures and owns the hardware; Get-Services supplies the install labour only.</b> Andy fronts the client relationship throughout and is on site for day one of every install.</p>
+    <h3>How the value splits</h3>
+    <ul>
+      <li><b>Headroom keeps:</b> origination, survey/qualification (via the engine), design, finance structuring, the <b>full client relationship</b>, brand, and <b>hardware procurement</b>. We buy the panels, inverters and kit directly, free-issue them to site, and keep the procurement margin and the manufacturer warranty relationship.</li>
+      <li><b>Get-Services supplies:</b> install labour, crew, plant and access (scaffolding), to our design and specification. They install the hardware we have already paid for and delivered — they do not procure it.</li>
+      <li><b>Andy:</b> manages the client engagement throughout and attends day one of installation to set the standard, protect the relationship and own QA at the critical first day on site.</li>
+      <li><b>Commercials to agree:</b> install-only price basis (day-rate vs rate-per-kWp installed), payment milestones, warranty &amp; defects ownership, exclusivity/non-circumvention, and capacity guarantees.</li>
+    </ul>
+    <div class="callout"><b>Protect the flank.</b> A <b>non-circumvention / non-solicit</b> clause is essential — Get-Services touches our client at the site visit and the install. Mirror the protection BridgePoint uses on the HH engagement.</div>
+    <div class="callout warn"><b>Two consequences of owning the hardware.</b> (1) <b>Working capital:</b> we fund the kit upfront, before the client pays in full, so the cashflow model must cover that gap. (2) <b>Risk &amp; insurance:</b> while our hardware sits on site pre- and during install it is our property — we need contractors'-all-risk / goods cover on it, and Get-Services must be liable for any loss or damage they cause handling it. Upside: we hold the manufacturer warranties directly and capture the procurement margin. <b>And:</b> Andy being on site day one must not accidentally make Headroom the principal contractor under CDM — that duty stays with Get-Services; Andy attends as client-side, not as the controlling contractor.</div>
+  </section>
+
+  <!-- journey -->
+  <section class="s" id="journey">
+    <div class="s-head"><span class="num" style="background:var(--solar);font-size:14px">✦</span><h2>The Headroom client journey — enquiry to aftercare</h2></div>
+    <p>A single, repeatable process from first enquiry to the 3-month review. Every stage has a named owner so nothing falls between Headroom and Get-Services. The last three stages are not admin — they are the <b>growth engine</b> that turns one install into the next three.</p>
+    <table>
+      <tr><th>#</th><th>Stage</th><th>What happens</th><th>Owner</th></tr>
+      <tr><td>1</td><td><b>Post enquiry</b></td><td>Inbound from site, audit request or referral. Logged in CRM, scored by the Headroom engine on arrival.</td><td>Headroom</td></tr>
+      <tr><td>2</td><td><b>Outbound initial call</b></td><td>Confirm requirements, budget, timescales and restrictions (lease/landlord, roof age, listed, planning). Qualify in or out fast.</td><td>Headroom (Andy/BD)</td></tr>
+      <tr><td>3</td><td><b>Site visit</b></td><td>Physical survey: roof condition, structure, electrics, metering, shading, access. Capture data for design.</td><td>Get-Services + Headroom</td></tr>
+      <tr><td>4</td><td><b>Design &amp; proposal</b></td><td>System design, yield &amp; load model, board-ready proposal with owned vs funded options, savings, ROI and payback.</td><td>Headroom</td></tr>
+      <tr><td>5</td><td><b>DNO application &amp; submission</b></td><td>Prepare and submit G98/G99 connection &amp; export application; manage the DNO relationship through to determination.</td><td>Headroom (DNO liaison)</td></tr>
+      <tr><td>6</td><td><b>Final proposal revision</b></td><td>Adjust system size / export to the DNO's approved capacity; reconfirm numbers and contract with the client.</td><td>Headroom</td></tr>
+      <tr><td>7</td><td><b>Installation</b></td><td>Headroom procures and free-issues the hardware to site. Get-Services provides install labour, scaffolding, commissioning and sign-off to BS 7671. <b>Andy on site day one</b> for QA and client relationship. Get-Services holds CDM principal-contractor duties.</td><td>Headroom (hardware + Andy) · Get-Services (labour)</td></tr>
+      <tr><td>8</td><td><b>Post-install evaluation</b></td><td>Snagging, commissioning evidence, monitoring live, handover pack and warranties to client. QA gate before sign-off.</td><td>Headroom + Get-Services</td></tr>
+      <tr><td>9</td><td><b>Case study request &amp; write-up</b><span class="pill">growth</span></td><td>Ask while goodwill is highest. Write a short, numbers-led case study with the client's permission. Fuel for sales &amp; site.</td><td>Headroom / BridgePoint</td></tr>
+      <tr><td>10</td><td><b>Referral scheme</b><span class="pill">growth</span></td><td>Invite the happy client to refer peers for a reward; activate introducer/agent referrals. Cheapest pipeline we have.</td><td>Headroom</td></tr>
+      <tr><td>11</td><td><b>3-month performance review &amp; visit</b><span class="pill">growth</span></td><td>Return on site, show generation vs forecast, confirm the saving is real. Trust-builder, upsell (battery/EV) and referral trigger.</td><td>Headroom (Andy)</td></tr>
+    </table>
+    <div class="callout solar"><b>Design the loop, not just the line.</b> Stages 9–11 close back into stage 1. A proven 3-month result (11) becomes a case study (9) and a warm referral (10), which feeds the next enquiry. Most installers stop at switch-on and leave that compounding value on the table. We make the after-care the acquisition channel.</div>
+    <div class="callout warn"><b>Two ownership flags in the journey.</b> Stage 3 (site visit) and stage 7 (install) are the only stages Get-Services touches the client directly — those are exactly where the <b>non-circumvention</b> clause must bite. And the <b>DNO management</b> (stages 5–6) is a genuine Headroom value-add worth charging for: many buyers fear the grid-connection process, and owning it cleanly is a differentiator.</div>
+  </section>
+
+  <!-- service -->
+  <section class="s" id="service">
+    <div class="s-head"><span class="num" style="background:var(--green-dim);font-size:15px">⟳</span><h2>Service &amp; maintenance — the recurring-revenue line</h2></div>
+    <p>New installs are lumpy and capital-led. <b>Service is recurring, asset-light and immediate</b> — it earns from day one without waiting for the install pipeline to mature, and it is what turns Headroom from a project shop into a business with a balance-sheet value. Three offers:</p>
+    <table>
+      <tr><th>Offer</th><th>What it is</th><th>Why it matters</th><th>Revenue</th></tr>
+      <tr><td><b>Legacy installation evaluation</b><span class="pill">trojan horse</span></td><td>Independent health-check of an existing third-party system: performance vs design, safety &amp; compliance (DC isolators, fire risk, earthing), inverter end-of-life, monitoring gaps.</td><td>Low-cost front door to a roof we didn't install. Underperformance and safety findings convert straight into a maintenance contract, repowering or battery retrofit.</td><td>Paid audit + downstream</td></tr>
+      <tr><td><b>Maintenance of existing systems</b></td><td>O&amp;M for systems others installed: cleaning, inspection, fault-finding, inverter swaps, monitoring, reporting.</td><td>Expands our market beyond new-build. Thousands of UK commercial systems are out of warranty, underperforming and orphaned by installers who vanished.</td><td>Recurring contract</td></tr>
+      <tr><td><b>Maintenance contracts on our own systems</b></td><td>Tiered O&amp;M on everything we install: monitoring, scheduled service, response SLA, performance guarantee.</td><td>Protects our performance promise, locks in the client, and is the natural product of the stage-11 review. Sold at the point of install.</td><td>Recurring ARR</td></tr>
+    </table>
+    <div class="callout"><b>Why this is the strategic prize.</b> Recurring service revenue smooths the lumpy install cashflow, compounds every year, and is what a buyer pays an ARR multiple for — it is how Headroom builds enterprise value, not just project margin. It is also asset-light: inspection and diagnostics are mostly Headroom / engineer time; physical fixes route through Get-Services. Tier it (Bronze monitoring → Silver scheduled → Gold guaranteed-performance) so there is an entry point for every budget.</div>
+    <div class="callout warn"><b>One requirement to flag.</b> Maintaining other people's installs means inheriting other people's risk. Every legacy system needs a documented condition baseline and a clear scope boundary before we take it on, or we own faults we didn't create. The evaluation (offer 1) <i>is</i> that baseline — so always lead with it.</div>
+  </section>
+
+  <!-- 9 -->
+  <section class="s" id="gtm">
+    <div class="s-head"><span class="num">9</span><h2>Go-to-market</h2></div>
+    <h3>Who we target first</h3>
+    <p>Tight ICP for speed: UK owner-occupiers and multi-site operators with large roofs and high daytime load — <b>warehousing &amp; logistics, manufacturing, cold storage, agriculture, leisure/retail parks, care homes, schools/MATs</b>. Daytime load is what makes solar pay, so we screen for it.</p>
+    <h3>The channel</h3>
+    <ol>
+      <li><b>Headroom audit as the front door.</b> Free or low-cost site-intelligence report. It qualifies the prospect and self-selects the serious ones.</li>
+      <li><b>Warm network first.</b> Mine BridgePoint, HH, NZP, Kevin's and Andy's contacts before spending on cold acquisition.</li>
+      <li><b>FD-led content &amp; outreach.</b> LinkedIn + targeted email with the "roof = liability or engine" hook and the funded/zero-capital angle.</li>
+      <li><b>Referral &amp; introducer scheme.</b> Pay for qualified roof introductions (brokers, accountants, commercial agents, facilities firms).</li>
+    </ol>
+    <div class="callout solar"><b>Hot words that convert (from live UK market scan):</b> "zero upfront cost", "off balance sheet", "price certainty / lock your rate", "energy independence", "your roof, working for you", "verified ROI", "funded solar", "hedge against rising bills", "no capital, all the savings", "move before the crowd".</div>
+  </section>
+
+  <!-- 10 -->
+  <section class="s" id="money">
+    <div class="s-head"><span class="num">10</span><h2>Money <span style="font-size:12px;color:var(--muted);font-weight:500">(illustrative — to be modelled with Gini)</span></h2></div>
+    <p>Indicative unit economics on a typical 250kWp commercial install (placeholders, not a quote):</p>
+    <table>
+      <tr><th>Line</th><th>Owned / EPC</th><th>Funded / PPA</th></tr>
+      <tr><td>Indicative system value</td><td>£175k–£250k</td><td>n/a to client (£0)</td></tr>
+      <tr><td>Headroom gross margin</td><td>10–20% of EPC</td><td>Origination fee + spread + O&amp;M</td></tr>
+      <tr><td>Indicative margin / deal</td><td>£20k–£45k</td><td>£8k–£25k + recurring</td></tr>
+      <tr><td>Recurring</td><td>O&amp;M / monitoring</td><td>O&amp;M / management fee over term</td></tr>
+    </table>
+    <h3>Path to meaningful revenue</h3>
+    <p>To contribute to Mark's £1m mandate, Headroom needs roughly <b>8–15 mid-sized installs</b> in year one depending on mix, or fewer larger ground-mount / multi-site deals. The Headroom engine plus warm network is how we shorten the sales cycle to hit that. <span class="draft">Build the model before committing to any number.</span></p>
+    <div class="grid">
+      <div class="card"><div class="k">Startup cost</div><div class="v">Low — <b>brand, site, deal docs</b>. No crews, no stock.</div></div>
+      <div class="card"><div class="k">Working capital</div><div class="v">Deposit / stage payment timing vs Get-Services. <b>Model the gap.</b></div></div>
+      <div class="card"><div class="k">Break-even</div><div class="v">A handful of EPC deals covers setup.</div></div>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="s" id="risk">
+    <div class="s-head"><span class="num">11</span><h2>Key risks &amp; mitigations</h2></div>
+    <table>
+      <tr><th>Risk</th><th>Mitigation</th></tr>
+      <tr><td>Delivery quality / liability sits with a third party</td><td>Tight subcontract, named on insurance, CDM principal contractor clear, QA sign-off gate</td></tr>
+      <tr><td>Get-Services circumvents us or hits capacity</td><td>Non-circumvention clause; line up a second installer early</td></tr>
+      <tr><td>Mixing physical-works risk into BridgePoint AI</td><td>Insurer/accountant sign-off; ring-fence; NewCo option if needed</td></tr>
+      <tr><td>Andy partnership sours</td><td>Vesting, good/bad-leaver, clear decision rights, written deed</td></tr>
+      <tr><td>Working-capital squeeze on stage payments</td><td>Match client deposits to supplier terms; favour funded deals early</td></tr>
+      <tr><td>Crowded installer market / price competition</td><td>Compete on intelligence, finance and trust, not lowest £/kWp</td></tr>
+      <tr><td>Policy / incentive shifts</td><td>Lead with hard ROI &amp; price-hedge, not subsidy-dependent cases</td></tr>
+    </table>
+  </section>
+
+  <!-- 12 -->
+  <section class="s" id="plan">
+    <div class="s-head"><span class="num">12</span><h2>First 90 days</h2></div>
+    <table>
+      <tr><th>Window</th><th>Moves</th></tr>
+      <tr><td><b>Weeks 1–2</b></td><td>Agree Andy's profit-share heads of terms · confirm Get-Services scope, pricing &amp; insurance · point Headroom domain at landing page · insurer/accountant sign-off on division model · lock ICP.</td></tr>
+      <tr><td><b>Weeks 3–6</b></td><td>Publish site &amp; one-pager · stand up Headroom audit as lead magnet · draft EPC/PPA &amp; subcontract templates · line up funded-solar finance partner · build the financial model with Gini · warm-network outreach list (50 roofs).</td></tr>
+      <tr><td><b>Weeks 7–12</b></td><td>First 3–5 qualified site audits delivered · first proposal(s) out · first signed deal or LOI · second installer in reserve · referral scheme live.</td></tr>
+    </table>
+  </section>
+
+  <!-- 13 -->
+  <section class="s" id="questions">
+    <div class="s-head"><span class="num">13</span><h2>Open questions to resolve</h2></div>
+    <h3>Structure &amp; people</h3>
+    <ul>
+      <li><span class="q">Does Andy's 50% mean profit, IP, or equity?</span> <span class="owner">decide first</span> Recommend: profit now, equity option later.</li>
+      <li><span class="q">What is the split <i>within</i> BridgePoint's 50%</span> across Mark, Gini, Kevin (and Stanley)?</li>
+      <li><span class="q">Does the 50% vest, and against what — time or pipeline?</span></li>
+      <li><span class="q">Who holds which decision rights?</span> Delivery vs finance vs brand.</li>
+      <li><span class="q">Is Kevin investing capital, lending his name, or both?</span></li>
+      <li><span class="q">What is Andy bringing day one</span> — pipeline, team, supplier relationships, exclusivity?</li>
+    </ul>
+    <h3>Legal &amp; risk</h3>
+    <ul>
+      <li><span class="q">Does running solar EPC inside BridgePoint AI breach its insurance or risk profile?</span></li>
+      <li><span class="q">Who is principal contractor under CDM</span> — us or Get-Services?</li>
+      <li><span class="q">Are we EPC contractor, or introducer/agent?</span> This changes liability dramatically.</li>
+      <li><span class="q">What accreditations does Get-Services actually hold,</span> and do they cover our target system sizes?</li>
+      <li><span class="q">Who insures our hardware on site</span> while it is free-issued and in Get-Services' custody — and does Andy attending day one keep CDM duty with Get-Services?</li>
+    </ul>
+    <h3>Commercial</h3>
+    <ul>
+      <li><span class="q">Install-only price basis with Get-Services?</span> Day-rate vs rate-per-kWp, plus non-circumvention terms.</li>
+      <li><span class="q">How do we fund the hardware upfront</span> — what is the working-capital line, and do client deposits cover the kit cost before install?</li>
+      <li><span class="q">Who is our funded-solar finance partner</span> for the PPA track?</li>
+      <li><span class="q">Lead with owned, funded, or both?</span></li>
+      <li><span class="q">Is the Headroom audit free, paid, or freemium?</span></li>
+      <li><span class="q">What is the year-one revenue target</span> and install count to hit it?</li>
+      <li><span class="q">How do we handle working-capital timing</span> on stage payments?</li>
+    </ul>
+    <h3>Brand &amp; market</h3>
+    <ul>
+      <li><span class="q">Does "Headroom" as a solar brand clash with the existing Headroom intelligence tool,</span> or do we deliberately fuse them?</li>
+      <li><span class="q">National or regional launch?</span> Get-Services' geography may set this.</li>
+      <li><span class="q">Tightest beachhead vertical</span> — logistics, manufacturing, agriculture, care?</li>
+    </ul>
+  </section>
+
+</div>
+<footer>
+  Headroom Solar · Draft business plan v0.1 · 5 June 2026 · A brand of BridgePoint AI Ltd · Confidential, Stanley-only. Figures illustrative pending financial model with V. Filmer-Sankey. ⚔️
+</footer>
+</body>
+</html>
