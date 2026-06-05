@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Headroom Solar — Decision Tracker</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#fafbfc;--paper:#fff;--panel-2:#f1f5f9;--line:#e2e8f0;--ink:#0f172a;--muted:#5b6b7a;--accent:#65a30d;--accent-dim:#4d7c0f;--solar:#d97706;--solar-bg:#fff7e6;--red:#dc2626;--blue:#1d4ed8;--amber:#ea580c}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .container{max-width:1080px;margin:0 auto;padding:36px 26px 90px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;margin-bottom:16px}
+  .brand .mk{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--solar),var(--accent-dim));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px}
+  .brand span{color:var(--accent)}
+  .doc-badge{font-size:11px;padding:4px 10px;border-radius:999px;background:var(--solar-bg);color:#92400e;border:1px solid rgba(217,119,6,.3);font-weight:600;letter-spacing:.04em;display:inline-block;margin-bottom:12px}
+  h1{font-size:28px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+  .lead{color:var(--muted);font-size:14.5px;max-width:760px}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px}
+  .lg{font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:999px}
+  .crit{background:#fee2e2;color:#b91c1c}.first{background:var(--solar-bg);color:#92400e}.std{background:var(--panel-2);color:var(--muted)}.ext{background:#dbeafe;color:#1e40af}
+  h2{font-size:16px;font-weight:800;margin:26px 0 8px;display:flex;align-items:center;gap:9px}
+  h2 .c{width:22px;height:22px;border-radius:6px;background:var(--accent);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  table{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:13px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:10.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);background:var(--panel-2);position:sticky;top:0}
+  td.item{font-weight:600;width:30%}
+  .owner{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+  .o-mark{background:#ffedd5;color:#c2410c}.o-gini{background:#dbeafe;color:#1d4ed8}.o-andy{background:#dcfce7;color:#15803d}.o-russ{background:#fef9c3;color:#854d0e}.o-legal{background:#ede9fe;color:#6d28d9}.o-stan{background:#fae8ff;color:#a21caf}
+  .pri{font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:999px;white-space:nowrap}
+  .doc{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--muted)}
+  .rec{color:#3f5806}
+  .box{margin:14px 0;padding:13px 15px;border-radius:11px;background:var(--solar-bg);border:1px solid rgba(217,119,6,.28);font-size:13.5px;color:#7c2d12}
+  .box b{color:#7c2d12}
+  footer{color:var(--muted);font-size:12px;margin-top:26px;padding-top:14px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand"><span class="mk">H</span>Head<span>room</span> Solar</div>
+  <span class="doc-badge">Decision Tracker · 5 June 2026</span>
+  <h1>Open decisions across the pack</h1>
+  <p class="lead">Every open placeholder and decision from the business plan, the two draft heads of terms and the finance brief, in one list, with an owner and a recommended default for each. Work top to bottom: the three critical items unblock everything else.</p>
+
+  <div class="legend">
+    <span class="lg crit">● Critical — unblocks the pack</span>
+    <span class="lg first">● Decide first</span>
+    <span class="lg ext">● Needs external input</span>
+    <span class="lg std">● Standard</span>
+  </div>
+
+  <div class="box"><b>The three that unblock everything:</b> (1) Andy nods at the profit-now / equity-later shape. (2) Russell confirms Get-Services as CDM principal contractor + sends accreditation/insurance/pricing pack. (3) Gini sizes the hardware-funding gap and how we bridge it. Land these and the drafts become signable and the model becomes buildable.</div>
+
+  <h2><span class="c">1</span>Structure &amp; people</h2>
+  <table>
+    <tr><th>Decision</th><th>Owner</th><th>Priority</th><th>Recommended default</th><th>Affects</th></tr>
+    <tr><td class="item">Andy's 50% — profit, IP or equity?</td><td><span class="owner o-mark">Mark+Andy</span></td><td><span class="pri crit">Critical</span></td><td class="rec">Profit share now; option to convert to 50% equity later. Keep IP with BridgePoint.</td><td class="doc">andy-deed §1,6</td></tr>
+    <tr><td class="item">Split within BridgePoint's 50% (Mark/Gini/Kevin/Stanley)</td><td><span class="owner o-mark">Mark+Gini</span></td><td><span class="pri first">Decide first</span></td><td class="rec">Agree internally so Andy faces one counterparty.</td><td class="doc">andy-deed §3.2</td></tr>
+    <tr><td class="item">Does the 50% vest? Over what — time or pipeline?</td><td><span class="owner o-mark">Mark+Andy</span></td><td><span class="pri first">Decide first</span></td><td class="rec">25% on signature, rest over 24 mths / milestones.</td><td class="doc">andy-deed §5</td></tr>
+    <tr><td class="item">Decision rights + deadlock mechanism</td><td><span class="owner o-mark">Mark+Andy</span></td><td><span class="pri std">Standard</span></td><td class="rec">Andy=delivery, BridgePoint=finance/brand; reserved matters joint.</td><td class="doc">andy-deed §7</td></tr>
+    <tr><td class="item">Kevin's role — capital, name, or both? (+ surname)</td><td><span class="owner o-mark">Mark</span></td><td><span class="pri first">Decide first</span></td><td class="rec">Clarify before drafting his position.</td><td class="doc">plan §13</td></tr>
+    <tr><td class="item">Andy's time commitment (full-time / days pw)</td><td><span class="owner o-andy">Andy</span></td><td><span class="pri std">Standard</span></td><td class="rec">Define; underpins his founder economics.</td><td class="doc">andy-deed §4.1</td></tr>
+    <tr><td class="item">Andy's disclosed pre-existing interests</td><td><span class="owner o-andy">Andy</span></td><td><span class="pri std">Standard</span></td><td class="rec">Schedule any current solar interests for non-compete carve-out.</td><td class="doc">andy-deed §9</td></tr>
+  </table>
+
+  <h2><span class="c">2</span>Legal &amp; risk</h2>
+  <table>
+    <tr><th>Decision</th><th>Owner</th><th>Priority</th><th>Recommended default</th><th>Affects</th></tr>
+    <tr><td class="item">Get-Services accepts CDM principal-contractor role</td><td><span class="owner o-russ">Russell</span></td><td><span class="pri crit">Critical</span></td><td class="rec">Must be yes, or liability lands on Headroom.</td><td class="doc">subcontract §4.1</td></tr>
+    <tr><td class="item">Does EPC inside BridgePoint AI breach its insurance / risk profile?</td><td><span class="owner o-gini">Gini</span> <span class="owner o-legal">insurer/acct</span></td><td><span class="pri ext">External</span></td><td class="rec">Confirm before first install; thin NewCo if it does.</td><td class="doc">plan §5</td></tr>
+    <tr><td class="item">Who insures our free-issued hardware on site?</td><td><span class="owner o-gini">Gini</span> <span class="owner o-russ">Russell</span></td><td><span class="pri ext">External</span></td><td class="rec">CAR/goods cover; Get-Services liable for their damage.</td><td class="doc">subcontract §2A,9</td></tr>
+    <tr><td class="item">EPC contractor vs introducer/agent status</td><td><span class="owner o-legal">Mark+legal</span></td><td><span class="pri std">Standard</span></td><td class="rec">Owning hardware + design points to contractor; confirm.</td><td class="doc">plan §13</td></tr>
+    <tr><td class="item">Get-Services accreditations cover 50kW–5MW?</td><td><span class="owner o-russ">Russell</span></td><td><span class="pri crit">Critical</span></td><td class="rec">Evidence MCS/NICEIC; define any size ceiling.</td><td class="doc">subcontract §3,15</td></tr>
+    <tr><td class="item">Overhead-allocation basis for Division (feeds Andy's 50%)</td><td><span class="owner o-gini">Gini</span></td><td><span class="pri first">Decide first</span></td><td class="rec">Set deliberately; it defines Net Profit.</td><td class="doc">andy-deed §2.2 · finance §5</td></tr>
+    <tr><td class="item">Andy day-one on site stays client-side (not controlling contractor)</td><td><span class="owner o-mark">Mark+Andy</span></td><td><span class="pri std">Standard</span></td><td class="rec">Frame as QA/relationship; don't pull CDM duty across.</td><td class="doc">plan §8</td></tr>
+  </table>
+
+  <h2><span class="c">3</span>Commercial &amp; money</h2>
+  <table>
+    <tr><th>Decision</th><th>Owner</th><th>Priority</th><th>Recommended default</th><th>Affects</th></tr>
+    <tr><td class="item">Hardware-funding gap — how do we bridge it?</td><td><span class="owner o-gini">Gini</span></td><td><span class="pri crit">Critical</span></td><td class="rec">Model peak cash; deposit / supplier terms / facility.</td><td class="doc">finance §2 · plan §8</td></tr>
+    <tr><td class="item">Client deposit % (does it cover the kit?)</td><td><span class="owner o-gini">Gini</span> <span class="owner o-andy">Andy</span></td><td><span class="pri first">Decide first</span></td><td class="rec">Aim deposit ≥ hardware cost to close the gap.</td><td class="doc">finance §2</td></tr>
+    <tr><td class="item">Supplier credit terms on hardware</td><td><span class="owner o-andy">Andy</span></td><td><span class="pri first">Decide first</span></td><td class="rec">Secure 30–60 days; biggest lever on the gap.</td><td class="doc">finance §2,8</td></tr>
+    <tr><td class="item">Install-only price basis (day-rate vs £/kWp)</td><td><span class="owner o-russ">Russell</span> <span class="owner o-mark">Mark</span></td><td><span class="pri first">Decide first</span></td><td class="rec">Fixed £/kWp installed protects our quote.</td><td class="doc">subcontract §5</td></tr>
+    <tr><td class="item">Non-circumvention tail &amp; remedy %</td><td><span class="owner o-mark">Mark</span></td><td><span class="pri std">Standard</span></td><td class="rec">24 mths, 15% remedy (mirror HH non-solicit).</td><td class="doc">subcontract §8</td></tr>
+    <tr><td class="item">Funded-solar finance partner (PPA track)</td><td><span class="owner o-mark">Mark</span></td><td><span class="pri std">Standard</span></td><td class="rec">Line up one partner before pushing funded.</td><td class="doc">plan §13 · finance §3</td></tr>
+    <tr><td class="item">Lead with owned, funded, or both?</td><td><span class="owner o-mark">Mark+Andy</span></td><td><span class="pri std">Standard</span></td><td class="rec">Funded first early (avoids carrying hardware).</td><td class="doc">plan §3</td></tr>
+    <tr><td class="item">Headroom audit — free, paid or freemium?</td><td><span class="owner o-mark">Mark</span></td><td><span class="pri std">Standard</span></td><td class="rec">Free/freemium front door; qualifies prospects.</td><td class="doc">plan §9</td></tr>
+    <tr><td class="item">Year-one revenue target &amp; install count</td><td><span class="owner o-mark">Mark</span> <span class="owner o-gini">Gini</span></td><td><span class="pri first">Decide first</span></td><td class="rec">Set against the £1m mandate in the model.</td><td class="doc">plan §10 · finance §6</td></tr>
+  </table>
+
+  <h2><span class="c">4</span>Brand, market &amp; launch</h2>
+  <table>
+    <tr><th>Decision</th><th>Owner</th><th>Priority</th><th>Recommended default</th><th>Affects</th></tr>
+    <tr><td class="item">Headroom solar vs existing Headroom tool — clash or fuse?</td><td><span class="owner o-mark">Mark</span> <span class="owner o-stan">Stanley</span></td><td><span class="pri std">Standard</span></td><td class="rec">Fuse — tool becomes the solar qualification engine.</td><td class="doc">plan §1,4</td></tr>
+    <tr><td class="item">National or regional launch?</td><td><span class="owner o-russ">Russell</span> <span class="owner o-mark">Mark</span></td><td><span class="pri std">Standard</span></td><td class="rec">Set by Get-Services geography initially.</td><td class="doc">plan §13</td></tr>
+    <tr><td class="item">Beachhead vertical (logistics / mfg / agri / care)</td><td><span class="owner o-mark">Mark+Andy</span></td><td><span class="pri std">Standard</span></td><td class="rec">Pick one with big roofs + daytime load.</td><td class="doc">plan §9</td></tr>
+    <tr><td class="item">Point the Headroom domain at the site</td><td><span class="owner o-mark">Mark</span> <span class="owner o-stan">Stanley</span></td><td><span class="pri std">Standard</span></td><td class="rec">CNAME when ready to go from preview to live.</td><td class="doc">website</td></tr>
+    <tr><td class="item">Wire website forms to a real inbox</td><td><span class="owner o-stan">Stanley/Jedi</span></td><td><span class="pri std">Standard</span></td><td class="rec">~10-min job; email or form service.</td><td class="doc">website</td></tr>
+    <tr><td class="item">Deploy doc-library (Gini's confirmed method)</td><td><span class="owner o-gini">Gini</span> <span class="owner o-mark">Mark</span></td><td><span class="pri first">Decide first</span></td><td class="rec">Zip upload vs wrangler; awaiting Gini's reply.</td><td class="doc">doc-library</td></tr>
+  </table>
+
+  <h2><span class="c">5</span>Document blanks to fill (definitive drafting)</h2>
+  <table>
+    <tr><th>Field</th><th>Owner</th><th>Affects</th></tr>
+    <tr><td class="item">BridgePoint AI Ltd company number</td><td><span class="owner o-gini">Gini</span></td><td class="doc">both deeds</td></tr>
+    <tr><td class="item">Get-Services full legal name + company number</td><td><span class="owner o-russ">Russell</span></td><td class="doc">subcontract</td></tr>
+    <tr><td class="item">Insurance limits (PL / products / EL)</td><td><span class="owner o-russ">Russell</span></td><td class="doc">subcontract §9</td></tr>
+    <tr><td class="item">Payment stages &amp; %, terms (days), retention %</td><td><span class="owner o-gini">Gini</span></td><td class="doc">subcontract §6</td></tr>
+    <tr><td class="item">Warranty &amp; defects periods</td><td><span class="owner o-russ">Russell</span></td><td class="doc">subcontract §7</td></tr>
+    <tr><td class="item">Incorporation trigger threshold; reserved-matter £ threshold</td><td><span class="owner o-mark">Mark+Gini</span></td><td class="doc">andy-deed §6,7</td></tr>
+    <tr><td class="item">Term &amp; notice periods (both agreements)</td><td><span class="owner o-mark">Mark</span></td><td class="doc">both deeds</td></tr>
+  </table>
+
+  <footer>Headroom Solar · Decision tracker · 5 June 2026 · BridgePoint AI · Owners: Mark, Gini, Andy, Russell (Get-Services), Stanley, legal. Both agreements subject to contract / solicitor review. ⚔️</footer>
+</div>
+</body>
+</html>
